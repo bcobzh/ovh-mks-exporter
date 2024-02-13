@@ -1,0 +1,7 @@
+namespace: grafana-prometheus
+ovh:
+  endpoint: ovh-eu
+  application_key : "application_key"
+  application_secret: "application_secret"
+  consumer_key: "consumer_key"
+  cloudproject_servicename: "cloudproject_servicename"
