@@ -1,4 +1,6 @@
 namespace: grafana-prometheus
+prometheus:
+  release: prom
 ovh:
   endpoint: ovh-eu
   application_key : "application_key"
