@@ -8,7 +8,7 @@ metadata:
     app.kubernetes.io/name: ovh-mks-exporter
     app.kubernetes.io/version: 1.3.3
     release: {{ .Values.prometheus.release }}
-  name: prom-ovh-mks-exporter
+  name: ovh-mks-exporter
 spec:
   endpoints:
     - port: http-metrics
