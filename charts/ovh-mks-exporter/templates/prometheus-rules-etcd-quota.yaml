@@ -11,7 +11,7 @@ spec:
         - alert: OvhMksEtcdQuotaWarning
           annotations:
             description: >-
-             'OVH MKS ETCD Quota for cluster \"{{ $labels.name }}\" is more than {{ $value | humanize }} %.'
+             'OVH MKS ETCD Quota for cluster {{ $labels.name }} is more than {{ $value | humanize }} %.'
             summary: OVH MKS ETCD Quota exceeds 75 %
           expr: >-
             (avg_over_time(ovh_mks_etcd_usage_usage_bytes[5m]) / avg_over_time(ovh_mks_etcd_usage_quota_bytes[5m])) * 100 > 75
@@ -21,7 +21,7 @@ spec:
         - alert: OvhMksEtcdQuotaCritical
           annotations:
             description: >-
-             'OVH MKS ETCD Quota for cluster "{{ $labels.name }}" is more than {{ $value | humanize }} %.'
+             'OVH MKS ETCD Quota for cluster {{ $labels.name }} is more than {{ $value | humanize }} %.'
             summary: OVH MKS ETCD Quota exceeds 90 %
           expr: >-
             (avg_over_time(ovh_mks_etcd_usage_usage_bytes[5m]) / avg_over_time(ovh_mks_etcd_usage_quota_bytes[5m])) * 100 > 90
