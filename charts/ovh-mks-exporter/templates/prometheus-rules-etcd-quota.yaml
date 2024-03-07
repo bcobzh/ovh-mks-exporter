@@ -4,7 +4,6 @@ metadata:
   labels:
     release: prom
   name: ovh-mks-etcd-quota
-  namespace: observability
 spec:
   groups:
     - name: ovh-mks-etcd-quota.rules

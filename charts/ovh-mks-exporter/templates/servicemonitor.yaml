@@ -2,7 +2,6 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  namespace: {{ .Values.namespace }}
   labels:
     app.kubernetes.io/instance: ovh-mks-exporter
     app.kubernetes.io/name: ovh-mks-exporter
@@ -16,7 +15,7 @@ spec:
       scrapeTimeout: 60s
   namespaceSelector:
     matchNames:
-      - {{ .Values.namespace }}
+      - {{ .Release.Namespace }}
   selector:
     matchLabels:
       app.kubernetes.io/instance: ovh-mks-exporter
